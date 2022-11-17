@@ -1,12 +1,236 @@
+/* Mixin */
+@mixin countryContainer {
+    .country-main-container {
+        height: 500px;
+        width: 100%;
+        margin-top: 100px;
+        position: relative;
+
+        .country-item {
+            height: 100%;
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+            transition: 0.3s ease-in;
+            z-index: 2;
+            cursor: pointer;
+
+            &:hover {
+                transform: translate(-50px, -50px);
+
+                .country-border {
+                    transform: translate(80px, 80px);
+                }
+            }
+
+            .country-border {
+                content: '';
+                position: absolute;
+                top: -50px;
+                left: -50px;
+                height: 100%;
+                width: 100%;
+                border: 5px solid black;
+                transition: 0.3s ease-in;
+                z-index: -1;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .country-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.8);
+
+                .overlay-title {
+                    position: absolute;
+                    top: 50px;
+                    left: 50px;
+                    
+                    h1 {
+                        font-size: 10rem;
+                        font-weight: 100;
+                        letter-spacing: 10px;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        font-size: 1.6rem;
+                        font-weight: 100;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    right: 50px;
+                    bottom: 50px;
+                    height: 60px;
+                    width: 100px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}
+/* End Mixin */
+
 #home {
     height: auto;
     width: 100%;
-    background-color: black;
 
     .home-container {
-        height: 100vh;
-        width: 90%;
-        margin: 0 auto;
-        background-color: white;
+        height: 90vh;
+        max-height: 1280px;
+        width: 100%;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: -1;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            z-index: 2;
+
+            h1 {
+                font-size: 7rem;
+                font-weight: 900;
+                letter-spacing: 1px;
+                color: white;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            a {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.5rem;
+                font-weight: 100;
+                letter-spacing: 3px;
+                padding: 10px 50px;
+                color: white;
+                background-image: linear-gradient(to right, orange, red);
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .country-container {
+        height: auto;
+        width: 100%;
+        background-color: #F9F6F0;
+        position: relative;
+        padding: 100px 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 60%;
+            max-width: 1280px;
+            border-left: 1px solid #C5C5C5;
+            border-right: 1px solid #C5C5C5;
+        }
+
+        .country-content {
+            height: auto;
+            width: 80%;
+            margin: 0 auto;
+
+            @include countryContainer();
+            .country-italy-container {
+                .country-italy {
+                    left: 100px;
+                }
+            }
+
+            .country-france-container {
+                margin: 200px 0;
+                display: flex;
+                justify-content: flex-end;
+
+                .country-france {
+                    right: 100px;
+
+                    &:hover {
+                        transform: translate(50px, -50px);
+
+                        .country-border {
+                            transform: translate(-80px, 80px);
+                        }
+                    }
+
+                    .country-border {
+                        bottom: 50px;
+                        left: 50px;
+                    }
+                }
+            }
+
+            .country-spain-container {
+                .country-spain {
+                    left: 100px;
+                }
+            }
+
+            .country-england-container {
+                margin-top: 200px;
+                display: flex;
+                justify-content: flex-end;
+
+                .country-england {
+                    right: 100px;
+
+                    &:hover {
+                        transform: translate(50px, -50px);
+
+                        .country-border {
+                            transform: translate(-80px, 80px);
+                        }
+                    }
+
+                    .country-border {
+                        bottom: 50px;
+                        left: 50px;
+                    }
+                }
+            }
+        }
     }
 }
