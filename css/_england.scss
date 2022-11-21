@@ -1,0 +1,13 @@
+#england {
+    height: auto;
+    width: 100%;
+
+    .england-top {
+        background-image: url('./img/england/londonbridge.png');
+        background-position: center;
+    }
+
+    .england-gallery-container {
+        max-width: 1440px;
+    }
+}

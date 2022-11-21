@@ -21,6 +21,69 @@ html {
   scroll-behavior: smooth;
 }
 
+.top {
+  height: 90vh;
+  max-height: 1280px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+.top:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.top .top-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top .top-title h1 {
+  color: #F9F6F0;
+  font-size: 5.5rem;
+  font-weight: 100;
+  line-height: 8rem;
+  text-transform: uppercase;
+}
+
+.top .top-title a {
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 15px 50px;
+  color: white;
+  background-color: #C4AE78;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .nav {
   height: auto;
   width: 100%;
@@ -54,6 +117,56 @@ html {
   padding: 0 15px;
   border-left: 1px solid black;
   border-right: 1px solid black;
+}
+
+#gallery {
+  height: auto;
+  max-width: 2000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+#gallery .gallery {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  grid-auto-flow: dense;
+}
+
+#gallery .gallery .v-stretch {
+  grid-row: span 2;
+}
+
+#gallery .gallery .h-stretch {
+  grid-column: span 2;
+}
+
+#gallery .gallery .big-stretch {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+#gallery .gallery .huge-stretch {
+  grid-row: span 3;
+  grid-column: span 4;
+}
+
+#gallery .gallery .gallery-item img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 /* Mixin */
@@ -534,153 +647,45 @@ html {
 }
 
 #italy .italy-top {
-  height: 90vh;
-  max-height: 1280px;
-  width: 100%;
   background-image: url("./img/italy/TREVI.jpg");
-  background-size: cover;
   background-position: top;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 1;
 }
 
-#italy .italy-top:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: -1;
-}
-
-#italy .italy-top .italy-top-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#italy .italy-top .italy-top-title h1 {
-  color: #F9F6F0;
-  font-size: 5.5rem;
-  font-weight: 100;
-  line-height: 8rem;
-  text-transform: uppercase;
-}
-
-#italy .italy-top .italy-top-title a {
-  font-size: 2rem;
-  font-weight: 100;
-  padding: 15px 50px;
-  color: white;
-  background-color: #C4AE78;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-#italy .italy-gallery {
+#france {
   height: auto;
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  padding-top: 50px;
 }
 
-#italy .italy-gallery .italy-gallery-container {
-  height: 90vh;
-  width: 70%;
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(300px, 3fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-  grid-gap: 20px;
+#france .france-top {
+  background-image: url("./img/france/eiffel.jpg");
+  background-position: 0 60%;
 }
 
-#italy .italy-gallery .italy-gallery-container .gallery1,
-#italy .italy-gallery .italy-gallery-container .gallery2,
-#italy .italy-gallery .italy-gallery-container .gallery3 {
+#spain {
   height: auto;
   width: 100%;
-  overflow: hidden;
 }
 
-#italy .italy-gallery .italy-gallery-container .gallery1 .grid-item,
-#italy .italy-gallery .italy-gallery-container .gallery2 .grid-item,
-#italy .italy-gallery .italy-gallery-container .gallery3 .grid-item {
+#spain .spain-top {
+  background-image: url("./img/lasagrada.jpg");
+  background-position: center;
+}
+
+#spain .spain-gallery-container {
+  max-width: 1440px;
+}
+
+#england {
+  height: auto;
   width: 100%;
-  margin-bottom: 20px;
-  cursor: pointer;
 }
 
-#italy .italy-gallery .italy-gallery-container .gallery1 .grid-item img,
-#italy .italy-gallery .italy-gallery-container .gallery2 .grid-item img,
-#italy .italy-gallery .italy-gallery-container .gallery3 .grid-item img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+#england .england-top {
+  background-image: url("./img/england/londonbridge.png");
+  background-position: center;
 }
 
-#italy .italy-gallery .italy-gallery-container .gallery1 .grid-item {
-  height: 40%;
-  -webkit-animation: scroll 200s linear infinite;
-          animation: scroll 200s linear infinite;
-}
-
-#italy .italy-gallery .italy-gallery-container .gallery2 .grid-item {
-  height: 60%;
-  -webkit-animation: scroll 300s linear infinite;
-          animation: scroll 300s linear infinite;
-}
-
-#italy .italy-gallery .italy-gallery-container .gallery3 .grid-item {
-  height: 50%;
-  -webkit-animation: scroll 100s linear infinite;
-          animation: scroll 100s linear infinite;
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(calc(-100% * 8));
-            transform: translateY(calc(-100% * 8));
-  }
-}
-
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(calc(-100% * 8));
-            transform: translateY(calc(-100% * 8));
-  }
+#england .england-gallery-container {
+  max-width: 1440px;
 }
 /*# sourceMappingURL=index.css.map */
