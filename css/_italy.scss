@@ -6,4 +6,113 @@
         background-image: url('./img/italy/TREVI.jpg');
         background-position: top;
     }
+
+    .italy-gallery-container {
+        height: auto;
+        width: 100%;
+        position: relative;
+        padding: 60px 0;
+        background-color: #f9f6f0;
+        
+        .italy-gallery {
+            height: 120vh;
+            max-height: 700px;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            position: relative;
+            background-color: #f9f6f0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 5%;
+                height: auto;
+                width: 95%;
+                border-bottom: 2px solid black;
+            }
+    
+            &::after {
+                content: '';
+                position: absolute;
+                top: 5%;
+                left: 10%;
+                height: 95%;
+                width: auto;
+                border-left: 2px solid black;
+            }
+
+            .italy-gallery-title {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 49%;
+                left: 20%;
+
+                h1 {
+                    font-size: 8rem;
+                    font-weight: 100;
+                    letter-spacing: 20px;
+                    color: #6F5B3E;
+                    text-transform: uppercase;
+
+                    p {
+                        font-size: 1.2rem;
+                        font-weight: 100;
+                        letter-spacing: 10px;
+                    }
+                }
+            }
+
+            .gallery-item {
+                position: absolute;
+                height: 250px;
+                width: 400px;
+                border-radius: 15px;
+                cursor: pointer;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 15px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 15px;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            .duomo {
+                top: 5%;
+                left: 20%;
+            }
+
+            .como {
+                top: 10%;
+                right: 10%;
+            }
+
+            .basilica {
+                top: 70%;
+                left: 16%;
+            }
+
+            .canal {
+                top: 60%;
+                right: 15%;
+            }
+        }
+    }
 }
