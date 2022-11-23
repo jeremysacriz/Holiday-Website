@@ -8,102 +8,95 @@
     }
 
     .spain-gallery-container {
-        height: auto;
-        width: 100%;
-        padding-bottom: 60px;
-        position: relative;
-        background-color: #f9f6f0;
+        padding-top: 0px;
         
         .spain-gallery {
-            height: 120vh;
-            max-height: 700px;
-            width: 100%;
-            max-width: 1300px;
-            margin: 0 auto;
-            position: relative;
-            background-color: #f9f6f0;
+            height: 140vh;
+            max-height: 850px;
 
             &::before {
-                content: '';
-                position: absolute;
                 bottom: 0;
-                left: 5%;
-                height: auto;
-                width: 95%;
-                border-bottom: 2px solid black;
             }
     
             &::after {
-                content: '';
-                position: absolute;
-                top: 5%;
                 right: 10%;
-                height: 95%;
-                width: auto;
-                border-left: 2px solid black;
             }
 
             .spain-gallery-title {
-                display: flex;
-                align-items: center;
-                position: absolute;
                 top: 15%;
                 left: 8%;
+            }
 
-                h1 {
-                    font-size: 8rem;
-                    font-weight: 100;
-                    letter-spacing: 20px;
-                    color: #6F5B3E;
-                    text-transform: uppercase;
+            .gallery-item {
+                &:hover {
+                    .overlay {
+                        height: 100%;
+                        opacity: 1;
 
-                    p {
-                        font-size: 1.2rem;
-                        font-weight: 100;
+                        h1 {
+                            animation: fadeIn 0.6s ease forwards;
+                            animation-delay: 0.5s;
+                        }
+                    }
+                }
+
+                .overlay {
+                    height: 0;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    opacity: 0;
+                    transition: 0.4s ease;
+
+                    h1 {
+                        font-size: 5rem;
+                        font-weight: 900;
+                        color: white;
                         letter-spacing: 10px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        opacity: 0;
+                        animation: fadeOut 0.6s ease forwards;
                     }
                 }
             }
 
-            .gallery-item {
-                position: absolute;
-                border-radius: 15px;
-                cursor: pointer;
-
-                img {
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 15px;
-                    object-fit: cover;
-                    object-position: center;
-                }
-
-                .overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 15px;
-                    background-color: rgba(0, 0, 0, 0.6);
-                    display: flex;
-                    justify-content: center;
-                }
-            }
-
             .lasagrada {
-                height: 380px;
+                height: 440px;
                 width: 850px;
-                top: 42%;
+                top: 43%;
                 left: 8%;
             }
 
             .museo {
-                height: 230px;
+                height: 280px;
                 width: 550px;
                 top: 5%;
                 right: 15%;
             }
         }
+    }
+}
+
+// Keyframes
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
     }
 }

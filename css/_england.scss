@@ -7,110 +7,85 @@
         background-position: center;
     }
 
-    .england-gallery-container {
-        height: auto;
-        width: 100%;
-        padding: 60px 0;
-        position: relative;
-        background-color: #f9f6f0;
-        
-        .england-gallery {
-            height: 120vh;
-            max-height: 700px;
-            width: 100%;
-            max-width: 1300px;
-            margin: 0 auto;
-            position: relative;
-            background-color: #f9f6f0;
+    .england-gallery-container .england-gallery {
+        max-height: 700px;
 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 5%;
-                height: auto;
-                width: 95%;
-                border-bottom: 2px solid black;
-            }
-    
-            &::after {
-                content: '';
-                position: absolute;
-                top: 5%;
-                left: 10%;
-                height: 95%;
-                width: auto;
-                border-left: 2px solid black;
-            }
+        &::before {
+            top: 0;
+        }
 
-            .england-gallery-title {
-                display: flex;
-                align-items: center;
-                position: absolute;
-                top: 15%;
-                left: 13%;
+        &::after {
+            left: 10%;
+        }
 
-                h1 {
-                    font-size: 8rem;
-                    font-weight: 100;
-                    letter-spacing: 20px;
-                    color: #6F5B3E;
-                    text-transform: uppercase;
+        .england-gallery-title {
+            top: 15%;
+            left: 13%;
+        }
 
-                    p {
-                        font-size: 1.2rem;
-                        font-weight: 100;
-                        letter-spacing: 10px;
+        .gallery-item {
+            overflow: hidden;
+
+            &:hover {
+                .overlay {
+                    opacity: 1;
+
+                    .overlay-title {
+                        transform: translateY(0%);
+                        transition-delay: 0.4s;
                     }
                 }
             }
 
-            .gallery-item {
-                position: absolute;
-                border-radius: 15px;
-                cursor: pointer;
+            .overlay {
+                background-color: rgba(0, 0, 0, 0.6);
+                opacity: 0;
+                transition: 0.4s ease;
 
-                img {
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 15px;
-                    object-fit: cover;
-                    object-position: center;
-                }
-
-                .overlay {
+                .overlay-title {
                     position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
+                    bottom: 0;
+                    height: auto;
                     width: 100%;
-                    border-radius: 15px;
-                    background-color: rgba(0, 0, 0, 0.6);
-                    display: flex;
-                    justify-content: center;
+                    padding: 15px 0;
+                    background-color: #F9F6F0;
+                    border: 2px solid #6F5B3E;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    transform: translateY(200%);
+                    transition: 0.4s ease;
+                    
+                    h2 {
+                        font-size: 2.2rem;
+                        font-weight: 900;
+                        letter-spacing: 4px;
+                        color: #6F5B3E;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
                 }
             }
+        }
 
-            .bigben {
-                height: 350px;
-                width: 500px;
-                top: 40%;
-                left: 15%;
-            }
+        .bigben {
+            height: 350px;
+            width: 500px;
+            top: 40%;
+            left: 15%;
+        }
 
-            .palace {
-                height: 280px;
-                width: 450px;
-                top: 60%;
-                right: 7%;
-            }
+        .palace {
+            height: 280px;
+            width: 450px;
+            top: 60%;
+            right: 7%;
+        }
 
-            .stonehenge {
-                height: 280px;
-                width: 420px;
-                top: 12%;
-                right: 5%;
-            }
+        .stonehenge {
+            height: 280px;
+            width: 420px;
+            top: 12%;
+            right: 5%;
         }
     }
 }

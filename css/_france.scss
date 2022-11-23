@@ -8,86 +8,79 @@
     }
 
     .france-gallery-container {
-        height: auto;
-        width: 100%;
-        padding-bottom: 60px;
-        position: relative;
-        background-color: #f9f6f0;
+        padding-top: 0px;
         
         .france-gallery {
-            height: 120vh;
-            max-height: 700px;
-            width: 100%;
-            max-width: 1300px;
-            margin: 0 auto;
-            position: relative;
-            background-color: #f9f6f0;
+            margin-bottom: 0px;
 
             &::before {
-                content: '';
-                position: absolute;
                 bottom: 0;
-                left: 5%;
-                height: auto;
-                width: 95%;
-                border-bottom: 2px solid black;
             }
     
             &::after {
-                content: '';
-                position: absolute;
-                top: 5%;
                 right: 10%;
-                height: 95%;
-                width: auto;
-                border-left: 2px solid black;
             }
 
             .france-gallery-title {
-                display: flex;
-                align-items: center;
-                position: absolute;
                 top: 15%;
                 left: 8%;
-
-                h1 {
-                    font-size: 8rem;
-                    font-weight: 100;
-                    letter-spacing: 20px;
-                    color: #6F5B3E;
-                    text-transform: uppercase;
-
-                    p {
-                        font-size: 1.2rem;
-                        font-weight: 100;
-                        letter-spacing: 10px;
-                    }
-                }
             }
 
             .gallery-item {
-                position: absolute;
-                border-radius: 15px;
-                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
 
-                img {
-                    height: 100%;
+                &:hover {
+                    .overlay-title {
+                        transform: translateY(-60%);
+                        opacity: 0;
+                    }
+
+                    .overlay {
+                        opacity: 0.6;
+                        transition-delay: 0.4s;
+                    }
+                }
+
+                .overlay-title {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: auto;
                     width: 100%;
-                    border-radius: 15px;
-                    object-fit: cover;
-                    object-position: center;
+                    background-color: #F9F6F0;
+                    padding: 20px 0;
+                    opacity: 1;
+                    transition: 0.4s ease;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    border: 2px solid #6F5B3E;
+
+                    h2 {
+                        font-size: 2.2rem;
+                        font-weight: 900;
+                        letter-spacing: 4px;
+                        color: #6F5B3E;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
                 }
 
                 .overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 15px;
-                    background-color: rgba(0, 0, 0, 0.6);
-                    display: flex;
-                    justify-content: center;
+                    opacity: 0;
+                    transition: 0.4s ease;
+
+                    h1 {
+                        font-size: 3.5rem;
+                        font-weight: 900;
+                        letter-spacing: 6px;
+                        color: white;
+                        text-transform: uppercase;
+                        transition: 0.4s ease;
+                        transition-delay: 0.4s;
+                    }
                 }
             }
 
