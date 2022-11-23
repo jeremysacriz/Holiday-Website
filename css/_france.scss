@@ -67,8 +67,6 @@
 
             .gallery-item {
                 position: absolute;
-                height: 250px;
-                width: 400px;
                 border-radius: 15px;
                 cursor: pointer;
 
@@ -94,18 +92,24 @@
             }
 
             .louvre {
-                left: 10%;
-                top: 35%;
+                height: 280px;
+                width: 450px;
+                top: 55%;
+                right: 15%;
             }
 
             .eiffel {
+                height: 250px;
+                width: 420px;
                 top: 10%;
                 right: 13%;
             }
 
             .tower {
-                top: 55%;
-                right: 20%;
+                height: 350px;
+                width: 480px;
+                left: 8%;
+                top: 35%;
             }
         }
     }

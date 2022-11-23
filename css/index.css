@@ -57,6 +57,7 @@ html {
   background-color: #C4AE78;
   text-decoration: none;
   text-transform: uppercase;
+  outline: none;
 }
 
 .nav {
@@ -522,8 +523,6 @@ html {
 }
 #italy .italy-gallery-container .italy-gallery .gallery-item {
   position: absolute;
-  height: 250px;
-  width: 400px;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -548,20 +547,28 @@ html {
   justify-content: center;
 }
 #italy .italy-gallery-container .italy-gallery .duomo {
+  height: 280px;
+  width: 420px;
   top: 5%;
   left: 20%;
 }
 #italy .italy-gallery-container .italy-gallery .como {
-  top: 10%;
+  height: 250px;
+  width: 420px;
+  top: 15%;
   right: 10%;
 }
 #italy .italy-gallery-container .italy-gallery .basilica {
+  height: 250px;
+  width: 400px;
   top: 70%;
   left: 16%;
 }
 #italy .italy-gallery-container .italy-gallery .canal {
-  top: 60%;
-  right: 15%;
+  height: 300px;
+  width: 450px;
+  top: 58%;
+  right: 14%;
 }
 
 #france {
@@ -627,8 +634,6 @@ html {
 }
 #france .france-gallery-container .france-gallery .gallery-item {
   position: absolute;
-  height: 250px;
-  width: 400px;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -653,16 +658,22 @@ html {
   justify-content: center;
 }
 #france .france-gallery-container .france-gallery .louvre {
-  left: 10%;
-  top: 35%;
+  height: 280px;
+  width: 450px;
+  top: 55%;
+  right: 15%;
 }
 #france .france-gallery-container .france-gallery .eiffel {
+  height: 250px;
+  width: 420px;
   top: 10%;
   right: 13%;
 }
 #france .france-gallery-container .france-gallery .tower {
-  top: 55%;
-  right: 20%;
+  height: 350px;
+  width: 480px;
+  left: 8%;
+  top: 35%;
 }
 
 #spain {
@@ -674,7 +685,94 @@ html {
   background-position: center;
 }
 #spain .spain-gallery-container {
-  max-width: 1440px;
+  height: auto;
+  width: 100%;
+  padding-bottom: 60px;
+  position: relative;
+  background-color: #f9f6f0;
+}
+#spain .spain-gallery-container .spain-gallery {
+  height: 120vh;
+  max-height: 700px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f9f6f0;
+}
+#spain .spain-gallery-container .spain-gallery::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  height: auto;
+  width: 95%;
+  border-bottom: 2px solid black;
+}
+#spain .spain-gallery-container .spain-gallery::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  height: 95%;
+  width: auto;
+  border-left: 2px solid black;
+}
+#spain .spain-gallery-container .spain-gallery .spain-gallery-title {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15%;
+  left: 8%;
+}
+#spain .spain-gallery-container .spain-gallery .spain-gallery-title h1 {
+  font-size: 8rem;
+  font-weight: 100;
+  letter-spacing: 20px;
+  color: #6F5B3E;
+  text-transform: uppercase;
+}
+#spain .spain-gallery-container .spain-gallery .spain-gallery-title h1 p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+#spain .spain-gallery-container .spain-gallery .gallery-item {
+  position: absolute;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#spain .spain-gallery-container .spain-gallery .gallery-item img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#spain .spain-gallery-container .spain-gallery .gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+}
+#spain .spain-gallery-container .spain-gallery .lasagrada {
+  height: 380px;
+  width: 850px;
+  top: 42%;
+  left: 8%;
+}
+#spain .spain-gallery-container .spain-gallery .museo {
+  height: 230px;
+  width: 550px;
+  top: 5%;
+  right: 15%;
 }
 
 #england {
@@ -686,5 +784,98 @@ html {
   background-position: center;
 }
 #england .england-gallery-container {
-  max-width: 1440px;
+  height: auto;
+  width: 100%;
+  padding: 60px 0;
+  position: relative;
+  background-color: #f9f6f0;
+}
+#england .england-gallery-container .england-gallery {
+  height: 120vh;
+  max-height: 700px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f9f6f0;
+}
+#england .england-gallery-container .england-gallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  height: auto;
+  width: 95%;
+  border-bottom: 2px solid black;
+}
+#england .england-gallery-container .england-gallery::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  height: 95%;
+  width: auto;
+  border-left: 2px solid black;
+}
+#england .england-gallery-container .england-gallery .england-gallery-title {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 15%;
+  left: 13%;
+}
+#england .england-gallery-container .england-gallery .england-gallery-title h1 {
+  font-size: 8rem;
+  font-weight: 100;
+  letter-spacing: 20px;
+  color: #6F5B3E;
+  text-transform: uppercase;
+}
+#england .england-gallery-container .england-gallery .england-gallery-title h1 p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+#england .england-gallery-container .england-gallery .gallery-item {
+  position: absolute;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#england .england-gallery-container .england-gallery .gallery-item img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#england .england-gallery-container .england-gallery .gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+}
+#england .england-gallery-container .england-gallery .bigben {
+  height: 350px;
+  width: 500px;
+  top: 40%;
+  left: 15%;
+}
+#england .england-gallery-container .england-gallery .palace {
+  height: 280px;
+  width: 450px;
+  top: 60%;
+  right: 7%;
+}
+#england .england-gallery-container .england-gallery .stonehenge {
+  height: 280px;
+  width: 420px;
+  top: 12%;
+  right: 5%;
 }/*# sourceMappingURL=index.css.map */

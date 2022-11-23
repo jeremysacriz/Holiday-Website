@@ -68,8 +68,6 @@
 
             .gallery-item {
                 position: absolute;
-                height: 250px;
-                width: 400px;
                 border-radius: 15px;
                 cursor: pointer;
 
@@ -95,23 +93,31 @@
             }
 
             .duomo {
+                height: 280px;
+                width: 420px;
                 top: 5%;
                 left: 20%;
             }
 
             .como {
-                top: 10%;
+                height: 250px;
+                width: 420px;
+                top: 15%;
                 right: 10%;
             }
 
             .basilica {
+                height: 250px;
+                width: 400px;
                 top: 70%;
                 left: 16%;
             }
 
             .canal {
-                top: 60%;
-                right: 15%;
+                height: 300px;
+                width: 450px;
+                top: 58%;
+                right: 14%;
             }
         }
     }
