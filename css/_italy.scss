@@ -30,7 +30,7 @@
                 color: white;
                 text-align: center;
                 text-transform: uppercase;
-                transition: 0.6s ease;
+                transition: 0s;
             }
 
             &:hover {
@@ -39,6 +39,7 @@
 
                     h1 {
                         transform: scale(3);
+                        transition: 0.6s ease;
                     }
                 }
             }
