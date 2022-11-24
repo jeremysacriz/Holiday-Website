@@ -8,7 +8,7 @@
     }
 
     .italy-gallery-container .italy-gallery {
-        max-height: 900px;
+        max-height: 800px;
 
         &::before {
             top: 0;
@@ -19,8 +19,8 @@
         }
 
         .italy-gallery-title {
-            top: 49%;
-            left: 20%;
+            top: 45%;
+            left: 25%;
         }
 
         .gallery-item {
@@ -49,28 +49,21 @@
             height: 280px;
             width: 420px;
             top: 5%;
-            left: 20%;
-        }
-
-        .como {
-            height: 250px;
-            width: 420px;
-            top: 15%;
-            right: 10%;
+            left: 15%;
         }
 
         .basilica {
-            height: 250px;
-            width: 400px;
-            top: 70%;
-            left: 16%;
+            height: 280px;
+            width: 420px;
+            top: 28%;
+            right: 10%;
         }
 
         .canal {
-            height: 300px;
-            width: 450px;
-            top: 58%;
-            right: 14%;
+            height: 280px;
+            width: 420px;
+            top: 65%;
+            left: 20%;
         }
     }
 }

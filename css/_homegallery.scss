@@ -147,6 +147,11 @@
                 object-position: center;
             }
 
+            a {
+                text-decoration: none;
+                outline: none;
+            }
+
             .overlay {
                 position: absolute;
                 top: 0;
