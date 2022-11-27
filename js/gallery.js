@@ -1,6 +1,6 @@
-const elem = elem => document.querySelector(elem)
-const id = id => document.getElementById(id)
-const elemAll = elemAll => document.querySelectorAll(elemAll)
+// const elem = elem => document.querySelector(elem)
+// const id = id => document.getElementById(id)
+// const elemAll = elemAll => document.querySelectorAll(elemAll)
 
 const btns = elemAll('.galleria-buttons button')
 
@@ -32,11 +32,49 @@ const galleryItem = elemAll('.galleria .gallery-item')
 const carousel = elem('.galleria-carousel')
 const carouselPosition = elem('.carousel-position')
 const carouselLength = elem('.carousel-length')
-const leftBtn = elem('.left')
-const rightBtn = elem('.right')
 
 const activeCarousel = elemAll('.carousel')
 const carouselImg = elemAll('.carousel .carousel-item')
+
+const key = (e) => {
+    if (e.code === 'ArrowLeft') {
+        activeCarousel.forEach(carousel => {
+            if (carousel.hasAttribute('data-active')) {
+                let activeImg = carousel.querySelector('[data-active]')
+                let carouselImg = carousel.querySelectorAll('.carousel-item')
+
+                let newIndex =[...carouselImg].indexOf(activeImg) - 1
+                if (newIndex < 0) newIndex = carouselImg.length - 1
+                if (newIndex >= carouselImg.length) newIndex = 0
+
+                carouselPosition.innerHTML = newIndex + 1
+
+                carouselImg[newIndex].dataset.active = "true"
+                delete activeImg.dataset.active
+            }
+        })
+
+    } else if (e.code === 'ArrowRight') {
+        activeCarousel.forEach(carousel => {
+            if (carousel.hasAttribute('data-active')) {
+                let activeImg = carousel.querySelector('[data-active]')
+                let carouselImg = carousel.querySelectorAll('.carousel-item')
+
+                let newIndex =[...carouselImg].indexOf(activeImg) + 1
+                if (newIndex < 0) newIndex = carouselImg.length - 1
+                if (newIndex >= carouselImg.length) newIndex = 0
+
+                carouselPosition.innerHTML = newIndex + 1
+
+                carouselImg[newIndex].dataset.active = "true"
+                delete activeImg.dataset.active
+            }
+        })
+
+    } else {
+        return null
+    }
+}
 
 galleria.forEach(gallery => {
     if (gallery.hasAttribute('data-active')) {
@@ -48,6 +86,8 @@ galleria.forEach(gallery => {
                 carouselImg[currentIndex].dataset.active = "true"
 
                 if (carousel.classList.contains('active')) {
+                    document.addEventListener('keydown', key)
+
                     activeCarousel.forEach(carousel => {
                         if (carousel.hasAttribute('data-active'))  {
                             let carouselImg = carousel.querySelectorAll('.carousel-item')
@@ -98,4 +138,5 @@ close.addEventListener('click', () => {
     carouselImg.forEach(img => {
         delete img.dataset.active
     })
+    document.removeEventListener('keydown', key)
 })

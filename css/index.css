@@ -891,6 +891,7 @@ html {
 }
 
 .country-galleria-container .country-galleria .galleria-carousel .carousel-buttons span {
+  position: absolute;
   font-size: 5rem;
   font-weight: 400;
   -webkit-transition: 0.4s ease;
@@ -904,12 +905,10 @@ html {
 }
 
 .country-galleria-container .country-galleria .galleria-carousel .carousel-buttons .left {
-  position: absolute;
   left: 10%;
 }
 
 .country-galleria-container .country-galleria .galleria-carousel .carousel-buttons .right {
-  position: absolute;
   right: 10%;
 }
 
@@ -1025,14 +1024,14 @@ html {
   transition: 1s ease;
 }
 
-#italy .italy-gallery-container .italy-gallery .duomo {
+#italy .italy-gallery-container .italy-gallery .basilica {
   height: 280px;
   width: 420px;
   top: 5%;
   left: 15%;
 }
 
-#italy .italy-gallery-container .italy-gallery .basilica {
+#italy .italy-gallery-container .italy-gallery .duomo {
   height: 280px;
   width: 420px;
   top: 28%;

@@ -151,6 +151,7 @@
                 color: white;
     
                 span {
+                    position: absolute;
                     font-size: 5rem;
                     font-weight: 400;
                     transition: 0.4s ease;
@@ -162,12 +163,10 @@
                 }
     
                 .left {
-                    position: absolute;
                     left: 10%;
                 }
     
                 .right {
-                    position: absolute;
                     right: 10%;
                 }
             }
