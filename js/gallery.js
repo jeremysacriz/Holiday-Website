@@ -4,6 +4,10 @@ const elemAll = elemAll => document.querySelectorAll(elemAll)
 
 const btns = elemAll('.galleria-buttons button')
 
+let loaderSrc = localStorage.getItem('loaderSrc')
+const loaderImg = elem('.loader-title img')
+loaderImg.src = loaderSrc
+
 window.addEventListener('load', () => {
     // Preloader
     const loader = elem('.loader')
@@ -29,7 +33,7 @@ window.addEventListener('load', () => {
     delete parentCarousel.children[previousIndex].dataset.active
     parentCarousel.children[+activeIndex].dataset.active = "true"
 
-    localStorage.clear()
+    // localStorage.clear()
 })
 
 btns.forEach(btn => {
