@@ -1,8 +1,36 @@
-// const elem = elem => document.querySelector(elem)
-// const id = id => document.getElementById(id)
-// const elemAll = elemAll => document.querySelectorAll(elemAll)
+const elem = elem => document.querySelector(elem)
+const id = id => document.getElementById(id)
+const elemAll = elemAll => document.querySelectorAll(elemAll)
 
 const btns = elemAll('.galleria-buttons button')
+
+window.addEventListener('load', () => {
+    // Preloader
+    const loader = elem('.loader')
+    loader.className += " hidden"
+
+    let activeIndex = localStorage.getItem('activeIndex')
+    // console.log(+activeIndex)
+
+    let parentBtn = elem('.galleria-buttons')
+    let previousActiveBtn = parentBtn.querySelector('[data-active]')
+    delete previousActiveBtn.dataset.active
+
+    parentBtn.children[+activeIndex].dataset.active = "true"
+
+    let parentGallery = elem('.galleria-container')
+    let previousIndex = [...parentBtn.children].indexOf(previousActiveBtn)
+
+    delete parentGallery.children[previousIndex].dataset.active
+    parentGallery.children[+activeIndex].dataset.active = "true"
+
+    let parentCarousel = elem('.carousel-img-container')
+
+    delete parentCarousel.children[previousIndex].dataset.active
+    parentCarousel.children[+activeIndex].dataset.active = "true"
+
+    localStorage.clear()
+})
 
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -95,7 +123,7 @@ galleria.forEach(gallery => {
                             carouselImg.forEach(img => {
                                 if (img.hasAttribute('data-active')) {
                                     let currentIndex = [...carouselImg].indexOf(img)
-                                    console.log(currentIndex)
+                                    // console.log(currentIndex)
                                     carouselPosition.innerHTML = currentIndex + 1
                                 }
                             })
