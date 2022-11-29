@@ -5,65 +5,23 @@
     .italy-top {
         background-image: url('./img/italy/TREVI.jpg');
         background-position: top;
+
+        .italy-top-title {
+            a {
+                line-height: 1;
+            }
+        }
     }
 
-    .italy-gallery-container .italy-gallery {
-        max-height: 800px;
-
-        &::before {
-            top: 0;
+    .italy-nav {
+        line-height: 1;
+        
+        a {
+            line-height: 1;
         }
-
-        &::after {
-            left: 10%;
-        }
-
-        .italy-gallery-title {
-            top: 45%;
-            left: 25%;
-        }
-
-        .gallery-item {
-            .overlay h1 {
-                font-size: 3.5rem;
-                font-weight: 900;
-                color: white;
-                text-align: center;
-                text-transform: uppercase;
-                transition: 0s;
-            }
-
-            &:hover {
-                .overlay {
-                    opacity: 0;
-
-                    h1 {
-                        transform: scale(4);
-                        transition: 1s ease;
-                    }
-                }
-            }
-        }
-
-        .basilica {
-            height: 280px;
-            width: 420px;
-            top: 5%;
-            left: 15%;
-        }
-
-        .duomo {
-            height: 280px;
-            width: 420px;
-            top: 28%;
-            right: 10%;
-        }
-
-        .canal {
-            height: 280px;
-            width: 420px;
-            top: 65%;
-            left: 20%;
+    
+        h1 {
+            margin: 0;
         }
     }
 }
