@@ -11,6 +11,9 @@
 html {
   font-size: 12px;
   font-family: "League Spartan", sans-serif;
+}
+
+.smooth {
   scroll-behavior: smooth;
 }
 
@@ -173,75 +176,6 @@ html {
   padding: 0 15px;
   border-left: 1px solid black;
   border-right: 1px solid black;
-}
-
-.carousel-container {
-  height: 100vh;
-  max-height: 750px;
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 60px 0;
-}
-.carousel-container .carousel {
-  height: 100%;
-}
-.carousel-container .carousel .indicators {
-  bottom: -10px;
-}
-.carousel-container .carousel .indicators .indicator-item {
-  background-color: #C4AE78;
-}
-.carousel-container .carousel .indicators .indicator-item.active {
-  background-color: #6F5B3E;
-}
-.carousel-container .carousel .carousel-item {
-  margin: 0 auto;
-  height: 350px;
-  width: 500px;
-  text-decoration: none;
-}
-.carousel-container .carousel .carousel-item.active .img-container .img-overlay h1 {
-  -webkit-animation: fadeIn 0.6s ease forwards;
-          animation: fadeIn 0.6s ease forwards;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.carousel-container .carousel .carousel-item .img-container {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-.carousel-container .carousel .carousel-item .img-container .img-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-}
-.carousel-container .carousel .carousel-item .img-container .img-overlay h1 {
-  font-size: 4rem;
-  font-weight: 100;
-  letter-spacing: 6px;
-  color: white;
-  text-transform: uppercase;
-  opacity: 0;
-  z-index: 2;
-}
-.carousel-container .carousel .carousel-item .img-container img {
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 
 .gallery-container {
@@ -907,6 +841,9 @@ html {
   background-image: url("./img/italy/TREVI.jpg");
   background-position: top;
 }
+#italy .italy-top .italy-top-title h1 {
+  line-height: 1;
+}
 #italy .italy-top .italy-top-title a {
   line-height: 1;
 }
@@ -918,6 +855,95 @@ html {
 }
 #italy .italy-nav h1 {
   margin: 0;
+}
+#italy .carousel-container {
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+#italy .carousel-container .carousel-title {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #F9F6F0;
+}
+#italy .carousel-container .carousel-title h1 {
+  font-size: 8rem;
+  font-weight: 100;
+  letter-spacing: 20px;
+  color: #6F5B3E;
+  text-transform: uppercase;
+}
+#italy .carousel-container .carousel-title h1 p {
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 10px;
+  line-height: 3;
+}
+#italy .carousel-container .carousel {
+  height: 450px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+#italy .carousel-container .carousel .indicators {
+  bottom: -20px;
+}
+#italy .carousel-container .carousel .indicators .indicator-item {
+  background-color: #C4AE78;
+}
+#italy .carousel-container .carousel .indicators .indicator-item.active {
+  background-color: black;
+}
+#italy .carousel-container .carousel .carousel-item {
+  margin: 0 auto;
+  height: 350px;
+  width: 500px;
+  text-decoration: none;
+}
+#italy .carousel-container .carousel .carousel-item.active .img-container .img-overlay h1 {
+  -webkit-animation: fadeIn 0.6s ease forwards;
+          animation: fadeIn 0.6s ease forwards;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+#italy .carousel-container .carousel .carousel-item .img-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#italy .carousel-container .carousel .carousel-item .img-container .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+#italy .carousel-container .carousel .carousel-item .img-container .img-overlay h1 {
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 6px;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0;
+  z-index: 2;
+}
+#italy .carousel-container .carousel .carousel-item .img-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #italy-galleria {
@@ -1227,40 +1253,53 @@ html {
   left: 13%;
 }
 #england .england-gallery-container .england-gallery .gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
-#england .england-gallery-container .england-gallery .gallery-item:hover .overlay {
-  opacity: 1;
+#england .england-gallery-container .england-gallery .gallery-item:hover .overlay-title {
+  transform: translateY(-60%);
+  opacity: 0;
 }
-#england .england-gallery-container .england-gallery .gallery-item:hover .overlay .overlay-title {
-  transform: translateY(0%);
+#england .england-gallery-container .england-gallery .gallery-item:hover .overlay {
+  opacity: 0.6;
   transition-delay: 0.4s;
 }
-#england .england-gallery-container .england-gallery .gallery-item .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: 0.4s ease;
-}
-#england .england-gallery-container .england-gallery .gallery-item .overlay .overlay-title {
+#england .england-gallery-container .england-gallery .gallery-item .overlay-title {
   position: absolute;
+  left: 0;
   bottom: 0;
   height: auto;
   width: 100%;
-  padding: 15px 0;
   background-color: #F9F6F0;
-  border: 2px solid #6F5B3E;
+  padding: 20px 0;
+  opacity: 1;
+  transition: 0.4s ease;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  transform: translateY(200%);
-  transition: 0.4s ease;
+  border: 2px solid #6F5B3E;
 }
-#england .england-gallery-container .england-gallery .gallery-item .overlay .overlay-title h2 {
+#england .england-gallery-container .england-gallery .gallery-item .overlay-title h2 {
   font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: 4px;
   color: #6F5B3E;
   text-align: center;
   text-transform: uppercase;
+}
+#england .england-gallery-container .england-gallery .gallery-item .overlay {
+  opacity: 0;
+  transition: 0.4s ease;
+}
+#england .england-gallery-container .england-gallery .gallery-item .overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.4s ease;
+  transition-delay: 0.4s;
 }
 #england .england-gallery-container .england-gallery .bigben {
   height: 350px;

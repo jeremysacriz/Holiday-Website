@@ -24,45 +24,59 @@
         }
 
         .gallery-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
 
             &:hover {
-                .overlay {
-                    opacity: 1;
+                .overlay-title {
+                    transform: translateY(-60%);
+                    opacity: 0;
+                }
 
-                    .overlay-title {
-                        transform: translateY(0%);
-                        transition-delay: 0.4s;
-                    }
+                .overlay {
+                    opacity: 0.6;
+                    transition-delay: 0.4s;
+                }
+            }
+
+            .overlay-title {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: auto;
+                width: 100%;
+                background-color: #F9F6F0;
+                padding: 20px 0;
+                opacity: 1;
+                transition: 0.4s ease;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                border: 2px solid #6F5B3E;
+
+                h2 {
+                    font-size: 2.2rem;
+                    font-weight: 900;
+                    letter-spacing: 4px;
+                    color: #6F5B3E;
+                    text-align: center;
+                    text-transform: uppercase;
                 }
             }
 
             .overlay {
-                background-color: rgba(0, 0, 0, 0.6);
                 opacity: 0;
                 transition: 0.4s ease;
 
-                .overlay-title {
-                    position: absolute;
-                    bottom: 0;
-                    height: auto;
-                    width: 100%;
-                    padding: 15px 0;
-                    background-color: #F9F6F0;
-                    border: 2px solid #6F5B3E;
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                    transform: translateY(200%);
+                h1 {
+                    font-size: 3.5rem;
+                    font-weight: 900;
+                    letter-spacing: 6px;
+                    color: white;
+                    text-transform: uppercase;
                     transition: 0.4s ease;
-                    
-                    h2 {
-                        font-size: 2.2rem;
-                        font-weight: 900;
-                        letter-spacing: 4px;
-                        color: #6F5B3E;
-                        text-align: center;
-                        text-transform: uppercase;
-                    }
+                    transition-delay: 0.4s;
                 }
             }
         }

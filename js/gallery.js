@@ -2,16 +2,10 @@ const elem = elem => document.querySelector(elem)
 const id = id => document.getElementById(id)
 const elemAll = elemAll => document.querySelectorAll(elemAll)
 
-const btns = elemAll('.galleria-buttons button')
-
-let loaderSrc = localStorage.getItem('loaderSrc')
-const loaderImg = elem('.loader-title img')
-loaderImg.src = loaderSrc
-
 window.addEventListener('load', () => {
     // Preloader
-    const loader = elem('.loader')
-    loader.className += " hidden"
+    const loader = elem('.loader');
+    loader.className += " hidden";
 
     let activeIndex = localStorage.getItem('activeIndex')
     // console.log(+activeIndex)
@@ -33,8 +27,10 @@ window.addEventListener('load', () => {
     delete parentCarousel.children[previousIndex].dataset.active
     parentCarousel.children[+activeIndex].dataset.active = "true"
 
-    // localStorage.clear()
+    localStorage.clear()
 })
+
+const btns = elemAll('.galleria-buttons button')
 
 btns.forEach(btn => {
     btn.addEventListener('click', () => {

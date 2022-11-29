@@ -16,7 +16,8 @@ const italyGalleryItem = elemAll('.carousel .carousel-item')
 italyGalleryItem.forEach(item => {
     item.addEventListener('click', () => {
         let newIndex = [...italyGalleryItem].indexOf(item)
-        let loaderImg = item.querySelector('img').src
+        let parentLoader = item.querySelector('.img-container')
+        let loaderImg = parentLoader.querySelector('img').src
 
         localStorage.setItem('activeIndex', newIndex)
         localStorage.setItem('loaderSrc', loaderImg)
