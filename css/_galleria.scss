@@ -85,16 +85,48 @@
                 }
     
                 .carousel-right {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
                     color: white;
     
+                    .play,
+                    .pause,
                     .close {
                         font-size: 2.8rem;
                         transition: 0.4s ease;
                         cursor: pointer;
     
                         &:hover {
+                            transform: scale(0.7);
+                        }
+                    }
+
+                    .play,
+                    .pause {
+                        &:hover {
                             transform: scale(0.8);
                         }
+                    }
+
+                    .play {
+                        display: flex;
+
+                        &.active {
+                            display: none;
+                        }
+                    }
+                    
+                    .pause {
+                        display: none;
+
+                        &.active {
+                            display: flex;
+                        }
+                    }
+
+                    .close {
+                        margin-left: 10px;
                     }
                 }
             }
@@ -149,6 +181,10 @@
                 align-items: center;
                 justify-content: center;
                 color: white;
+
+                &.active {
+                    display: none;
+                }
     
                 span {
                     position: absolute;
@@ -158,7 +194,7 @@
                     cursor: pointer;
     
                     &:hover {
-                        transform: scale(0.8);
+                        transform: scale(0.6);
                     }
                 }
     

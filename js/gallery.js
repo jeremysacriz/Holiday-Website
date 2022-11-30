@@ -160,11 +160,79 @@ buttons.forEach(btn => {
     })
 })
 
+let boolean = '';
+let carouselButtons = elem('.carousel-buttons')
+
+let play = elem('.play')
+play.addEventListener('click', () => {
+    play.classList.add('active')
+    pause.classList.add('active')
+    carouselButtons.classList.add('active')
+    document.removeEventListener('keydown', key)
+    console.log('Slideshow running')
+
+    boolean = false
+
+    activeCarousel.forEach(carousel => {
+        if (carousel.hasAttribute('data-active')) {
+            let carouselImg = carousel.querySelectorAll('.carousel-item')
+            let previousCarouselImg = carousel.querySelector('[data-active]')
+            let newIndex = [...carouselImg].indexOf(previousCarouselImg)
+            let previousIndex = newIndex - 1
+
+            function slideshow() {
+                if (previousIndex === carouselImg.length - 1) {
+                    previousIndex = -1
+                }
+
+                if (newIndex === carouselImg.length - 1) {
+                    newIndex = -1
+                }
+
+                previousIndex++
+                newIndex++
+
+                // console.log(previousIndex)
+                // console.log(newIndex)
+
+                carouselPosition.innerHTML = newIndex + 1
+
+                delete carouselImg[previousIndex].dataset.active
+                carouselImg[newIndex].dataset.active = "true"
+            }
+
+            interval = setInterval(slideshow, 3000)
+        }
+    })
+})
+
+let pause = elem('.pause')
+pause.addEventListener('click', () => {
+    pause.classList.remove('active')
+    play.classList.remove('active')
+    carouselButtons.classList.remove('active')
+    document.addEventListener('keydown', key)
+
+    clearInterval(interval)
+    console.log('Slideshow paused')
+})
+
 let close = elem('.close')
 close.addEventListener('click', () => {
     carousel.classList.remove('active')
     carouselImg.forEach(img => {
-        delete img.dataset.active
+        if (img.hasAttribute('data-active')) {
+            delete img.dataset.active
+        }
     })
     document.removeEventListener('keydown', key)
+
+    pause.classList.remove('active')
+    play.classList.remove('active')
+    carouselButtons.classList.remove('active')
+
+    if (boolean === false) {
+        clearInterval(interval)
+        console.log('Slideshow paused')
+    }
 })

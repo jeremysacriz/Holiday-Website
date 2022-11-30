@@ -34,23 +34,24 @@
         width: 100%;
         margin: 0 auto;
         padding: 40px 0;
+        background-color: #F9F6F0;
 
         .carousel-title {
             width: 100%;
             margin: 0 auto;
             display: flex;
             justify-content: center;
-            background-color: #F9F6F0;
+            background-color: #D6AD60;
 
             h1 {
                 font-size: 8rem;
                 font-weight: 100;
                 letter-spacing: 20px;
-                color: #6F5B3E;
+                color: #F9F6F0;
                 text-transform: uppercase;
 
                 p {
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                     font-weight: 900;
                     letter-spacing: 10px;
                     line-height: 3;
@@ -83,11 +84,9 @@
                 text-decoration: none;
     
                 &.active {
-                    .img-container .img-overlay {
-                        h1 {
-                            animation: fadeIn 0.6s ease forwards;
-                            animation-delay: 0.2s;
-                        }
+                    .img-container .img-overlay .img-overlay-title {
+                        animation: fadeIn 0.6s ease forwards;
+                        animation-delay: 0.2s;
                     }
                 }
     
@@ -104,19 +103,33 @@
                         width: 100%;
                         border-radius: 20px;
                         background-color: rgba(0, 0, 0, 0.6);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         transition: 0.3s ease;
+                        line-height: 1;
+                        margin: 0;
     
-                        h1 {
-                            font-size: 4rem;
-                            font-weight: 100;
-                            letter-spacing: 6px;
-                            color: white;
-                            text-transform: uppercase;
+                        .img-overlay-title {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
                             opacity: 0;
-                            z-index: 2;
+
+                            h1, p {
+                                font-size: 4.5rem;
+                                font-weight: 100;
+                                letter-spacing: 6px;
+                                line-height: 1;
+                                color: white;
+                                text-transform: uppercase;
+                                z-index: 2;
+                                margin: 0;
+                            }
+    
+                            p {
+                                font-size: 1.5rem;
+                                margin-top: 8px;
+                            }
                         }
                     }
     
