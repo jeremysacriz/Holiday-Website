@@ -15,9 +15,13 @@ layers.addEventListener('click', () => {
     layers.classList.add('active')
     layersClear.classList.add('active')
 
-    audio.classList.add('active')
-    mute.classList.add('active')
     video.play()
+
+    video.muted = false
+    if (video.muted === false) {
+        audio.classList.add('active')
+        mute.classList.add('active')
+    }
 })
 
 layersClear.addEventListener('click', () => {
@@ -25,3 +29,46 @@ layersClear.addEventListener('click', () => {
     layers.classList.remove('active')
     videoOverlay.classList.remove('active')
 })
+
+audio.addEventListener('click', () => {
+    video.muted = true
+    if (video.muted === true) {
+        audio.classList.remove('active')
+        mute.classList.remove('active')
+    }
+})
+
+mute.addEventListener('click', () => {
+    video.muted = false
+    if (video.muted === false) {
+        audio.classList.add('active')
+        mute.classList.add('active')
+    }
+})
+
+const observerOptions = {
+    root: null,
+    rootMargin: '50% 0px 0px 0px',
+    threshold: 1.0
+}
+
+const observer = new IntersectionObserver
+(function(
+    entries,
+    observer
+    ) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                videoOverlay.classList.remove('active')
+                layersClear.classList.remove('active')
+                layers.classList.remove('active')
+                
+                video.pause()
+            } else {
+                video.play()
+            }
+        })
+    },
+observerOptions)
+
+observer.observe(video)
