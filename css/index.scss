@@ -18,6 +18,15 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --cream: #F9F6F0;
+    --light-beige: #C4AE78;
+    --dark-beige: #6F5B3E;
+    --light-grey: #C5C5C5;
+}
+
 @import "./preloader";
 
 @import "./homegallery";

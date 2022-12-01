@@ -2,7 +2,7 @@
     height: auto;
     width: 100%;
     padding: 80px 0;
-    background-color: #F9F6F0;
+    background-color: var(--cream);
 
     .country-galleria {
         height: auto;
@@ -17,17 +17,17 @@
             justify-content: center;
 
             button {
-                color: black;
-                background-color: #F9F6F0;
-                border: 2px solid black;
+                color: var(--black);
+                background-color: var(--cream);
+                border: 2px solid var(--black);
                 padding: 15px 50px;
                 margin-right: 20px;
                 outline: none;
                 cursor: pointer;
 
                 &[data-active] {
-                    color: #F9F6F0;
-                    background-color: black;
+                    color: var(--cream);
+                    background-color: var(--black);
                 }
 
                 h1 {
@@ -88,7 +88,7 @@
                     display: flex;
                     align-items: center;
                     flex-direction: row;
-                    color: white;
+                    color: var(--white);
     
                     .play,
                     .pause,
@@ -180,7 +180,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: white;
+                color: var(--white);
 
                 &.active {
                     display: none;

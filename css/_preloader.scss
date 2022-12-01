@@ -9,7 +9,7 @@
     height: 100%;
     width: 100%;
     z-index: 1000;
-    background-color: black;
+    background-color: var(--black);
 
     &.hidden {
         transition: 1s ease;
@@ -42,7 +42,7 @@
         animation-delay: 0.4s;
 
         .sync {
-            color: white;
+            color: var(--white);
             animation: rotate 1.6s linear infinite;
             transform: scale(1.5);
         }

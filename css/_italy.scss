@@ -34,30 +34,7 @@
         width: 100%;
         margin: 0 auto;
         padding: 40px 0;
-        background-color: #F9F6F0;
-
-        .carousel-title {
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            background-color: #D6AD60;
-
-            h1 {
-                font-size: 8rem;
-                font-weight: 100;
-                letter-spacing: 20px;
-                color: #F9F6F0;
-                text-transform: uppercase;
-
-                p {
-                    font-size: 1.4rem;
-                    font-weight: 900;
-                    letter-spacing: 10px;
-                    line-height: 3;
-                }
-            }
-        }
+        background-color: var(--black);
     
         .carousel {
             height: 450px;
@@ -69,10 +46,10 @@
                 bottom: -20px;
     
                 .indicator-item {
-                    background-color: #C4AE78;
+                    background-color: var(--white);
     
                     &.active {
-                        background-color: black;
+                        background-color: var(--light-beige);
                     }
                 }
             }
@@ -120,7 +97,7 @@
                                 font-weight: 100;
                                 letter-spacing: 6px;
                                 line-height: 1;
-                                color: white;
+                                color: var(--white);
                                 text-transform: uppercase;
                                 z-index: 2;
                                 margin: 0;

@@ -50,19 +50,19 @@
                     bottom: 0;
                     height: auto;
                     width: 100%;
-                    background-color: #F9F6F0;
+                    background-color: var(--cream);
                     padding: 20px 0;
                     opacity: 1;
                     transition: 0.4s ease;
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
-                    border: 2px solid #6F5B3E;
+                    border: 2px solid var(--dark-beige);
 
                     h2 {
                         font-size: 2.2rem;
                         font-weight: 900;
                         letter-spacing: 4px;
-                        color: #6F5B3E;
+                        color: var(--dark-beige);
                         text-align: center;
                         text-transform: uppercase;
                     }
@@ -76,7 +76,7 @@
                         font-size: 3.5rem;
                         font-weight: 900;
                         letter-spacing: 6px;
-                        color: white;
+                        color: var(--white);
                         text-transform: uppercase;
                         transition: 0.4s ease;
                         transition-delay: 0.4s;
