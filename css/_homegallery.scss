@@ -169,3 +169,38 @@
         }
     }
 }
+
+// Media Queries
+@media only screen and (max-width: 1280px) {
+    .top .top-title {
+        h1 {
+            font-size: 5rem;
+        }
+
+        a {
+            font-size: 1.4rem;
+            padding: 15px 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .top .top-title {
+        h1 {
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        a {
+            font-size: 1rem;
+            padding: 10px 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        padding: 10px 20px;
+    }
+}

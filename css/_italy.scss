@@ -125,3 +125,42 @@
         }
     }
 }
+
+// Media Queries
+@media only screen and (max-width: 1280px) {
+    #italy .carousel-container .carousel {
+        .carousel-item {
+            height: 300px;
+            width: 450px;
+
+            .img-container .img-overlay .img-overlay-title {
+                h1 {
+                    font-size: 4rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #italy .carousel-container .carousel {
+        .carousel-item {
+            height: 250px;
+            width: 350px;
+
+            .img-container .img-overlay .img-overlay-title {
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

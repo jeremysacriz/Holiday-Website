@@ -472,3 +472,196 @@
         opacity: 0;
     }
 }
+
+// Media Queries
+@media only screen and (max-width: 1280px) {
+    #home {
+        .home-container .home-overlay .title {
+            h1 {
+                font-size: 5.5rem;
+            }
+    
+            a {
+                font-size: 1.2rem;
+                padding: 10px 30px;
+            }
+        }
+
+        .country-container {
+            .country-title h1 {
+                font-size: 4.2rem;
+            }
+
+            .country-content .country-main-container {
+                height: 300px;
+
+                .country-item {
+                    max-width: 500px;
+
+                    .country-link .country-overlay {
+                        .overlay-title h1,
+                        .overlay-title-2 h1 {
+                            font-size: 4rem;
+                        }
+
+                        img {
+                            height: 30px;
+                            width: 50px;
+                        }
+                    }
+                }
+
+                .country-bg-text h1 {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #home .country-container .country-content {
+        .country-main-container {
+            display: flex;
+            justify-content: center;
+    
+            .country-bg-text {
+                display: none;
+            }
+        }
+
+        .country-italy-container .country-italy,
+        .country-spain-container .country-spain {
+            left: 0;
+        }
+
+        .country-france-container .country-france,
+        .country-england-container .country-england {
+            right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #home {
+        .home-container .home-overlay .title {
+            left: 0;
+            text-align: center;
+            margin: 0 auto;
+
+            h1 {
+                font-size: 4rem;
+            }
+    
+            a {
+                font-size: 1rem;
+                padding: 10px 30px;
+            }
+        }
+
+        .country-container {
+            padding: 75px 0;
+
+            &::after {
+                width: 499.2px;
+            }
+
+            .country-title h1 {
+                font-size: 2.8rem;
+            }
+
+            .country-content {
+                .country-main-container {
+                    height: 200px;
+                    margin: 150px 0;
+    
+                    .country-item {
+                        max-width: 350px;
+
+                        .country-border {
+                            top: -30px;
+                            left: -30px;
+                        }
+    
+                        &:hover {
+                            .country-border {
+                                transform: translate(60px, 60px)
+                            }
+                        }
+                        .country-link .country-overlay {
+                            .overlay-title {
+                                top: 20px;
+                                left: 20px;
+                            }
+    
+                            .overlay-title {
+                                h1 {
+                                    font-size: 3.6rem;
+                                }
+    
+                                p {
+                                    font-size: 1.2rem;
+                                }
+                            }
+    
+                            .overlay-title-2 {
+                                h1 {
+                                    font-size: 3rem;
+                                }
+    
+                                p {
+                                    font-size: 1rem;
+                                }
+                            }
+    
+                            img {
+                                height: 20px;
+                                width: 35px;
+                                right: 20px;
+                                bottom: 20px;
+                            }
+                        }
+                    }
+    
+                    .country-bg-text h1 {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .country-italy-container {
+                    margin-top: 75px;
+                }
+
+                .country-france-container .country-france {
+                    .country-border {
+                        bottom: 30px;
+                        left: 30px;
+                    }
+
+                    &:hover {
+                        .country-border {
+                            transform: translate(-60px, 60px);
+                        }
+                    }
+                }
+
+                .country-england-container {
+                    margin-bottom: 0px;
+
+                    .country-england {
+                        .country-border {
+                            bottom: 30px;
+                            left: 30px;
+                        }
+    
+                        &:hover {
+                            .country-border {
+                                transform: translate(-60px, 60px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
