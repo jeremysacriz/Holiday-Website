@@ -8,10 +8,8 @@
     }
 
     .france-gallery-container {
-        padding-top: 0px;
-        
         .france-gallery {
-            margin-bottom: 0px;
+            padding-bottom: 50px;
 
             &::before {
                 bottom: 0;
@@ -19,90 +17,6 @@
     
             &::after {
                 right: 10%;
-            }
-
-            .france-gallery-title {
-                top: 15%;
-                left: 8%;
-            }
-
-            .gallery-item {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-
-                &:hover {
-                    .overlay-title {
-                        transform: translateY(-60%);
-                        opacity: 0;
-                    }
-
-                    .overlay {
-                        opacity: 0.6;
-                        transition-delay: 0.4s;
-                    }
-                }
-
-                .overlay-title {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    height: auto;
-                    width: 100%;
-                    background-color: var(--cream);
-                    padding: 20px 0;
-                    opacity: 1;
-                    transition: 0.4s ease;
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                    border: 2px solid var(--dark-beige);
-
-                    h2 {
-                        font-size: 2.2rem;
-                        font-weight: 900;
-                        letter-spacing: 4px;
-                        color: var(--dark-beige);
-                        text-align: center;
-                        text-transform: uppercase;
-                    }
-                }
-
-                .overlay {
-                    opacity: 0;
-                    transition: 0.4s ease;
-
-                    h1 {
-                        font-size: 3.5rem;
-                        font-weight: 900;
-                        letter-spacing: 6px;
-                        color: var(--white);
-                        text-transform: uppercase;
-                        transition: 0.4s ease;
-                        transition-delay: 0.4s;
-                    }
-                }
-            }
-
-            .louvre {
-                height: 280px;
-                width: 450px;
-                top: 55%;
-                right: 15%;
-            }
-
-            .eiffel {
-                height: 250px;
-                width: 420px;
-                top: 10%;
-                right: 13%;
-            }
-
-            .tower {
-                height: 350px;
-                width: 480px;
-                left: 8%;
-                top: 35%;
             }
         }
     }

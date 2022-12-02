@@ -49,37 +49,6 @@
     }
 }
 
-.nav {
-    height: auto;
-    width: 100%;
-    padding: 10px 50px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid black;
-
-    a {
-        text-decoration: none;
-        
-        span {
-            font-size: 2.5rem;
-            color: var(--black);
-            padding-right: 15px;
-            cursor: pointer;
-        }
-    }
-
-    h1 {
-        font-family: 'Noto Sans', sans-serif;
-        font-size: 1.2rem;
-        font-weight: 900;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        padding: 0 15px;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
-    }
-}
-
 .gallery-container {
     height: auto;
     width: 100%;
@@ -88,18 +57,24 @@
     background-color: var(--cream);
 
     .gallery {
-        height: 120vh;
+        height: 80vh;
         max-height: 750px;
         width: 100%;
         max-width: 1300px;
         margin: 0 auto;
+        padding: 0 100px;
         position: relative;
         background-color: var(--cream);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(440px, 2fr));
+        grid-row-gap: 50px;
+        align-items: center;
+        justify-items: center;
 
         &::before {
             content: '';
             position: absolute;
-            left: 5%;
+            bottom: 0;
             height: auto;
             width: 95%;
             border-bottom: 2px solid black;
@@ -108,8 +83,8 @@
         &::after {
             content: '';
             position: absolute;
-            top: 5%;
-            height: 95%;
+            top: 0;
+            height: 100%;
             width: auto;
             border-left: 2px solid black;
         }
@@ -117,7 +92,6 @@
         .gallery-title {
             display: flex;
             align-items: center;
-            position: absolute;
 
             h1 {
                 font-size: 8rem;
@@ -135,9 +109,23 @@
         }
 
         .gallery-item {
-            position: absolute;
             border-radius: 15px;
             cursor: pointer;
+            position: relative;
+            height: 300px;
+            width: 420px;
+
+            &:hover {
+                .overlay-title {
+                    transform: translateY(-60%);
+                    opacity: 0;
+                }
+
+                .overlay {
+                    opacity: 0.6;
+                    transition-delay: 0.4s;
+                }
+            }
 
             img {
                 height: 100%;
@@ -152,6 +140,30 @@
                 outline: none;
             }
 
+            .overlay-title {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: auto;
+                width: 100%;
+                background-color: var(--cream);
+                padding: 15px 0;
+                opacity: 1;
+                transition: 0.4s ease;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                border: 2px solid var(--dark-beige);
+
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 900;
+                    letter-spacing: 4px;
+                    color: var(--dark-beige);
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+
             .overlay {
                 position: absolute;
                 top: 0;
@@ -160,11 +172,21 @@
                 width: 100%;
                 border-radius: 15px;
                 background-color: var(--black);
-                opacity: 0.6;
+                opacity: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 transition: 0.6s ease;
+
+                h1 {
+                    font-size: 3rem;
+                    font-weight: 900;
+                    letter-spacing: 6px;
+                    color: var(--white);
+                    text-transform: uppercase;
+                    transition: 0.4s ease;
+                    transition-delay: 0.4s;
+                }
             }
         }
     }
