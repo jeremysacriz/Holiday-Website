@@ -9,8 +9,6 @@
 
     .spain-gallery-container {
         .spain-gallery {
-            height: 80vh;
-            max-height: 850px;
             padding-bottom: 50px;
 
             &::before {
@@ -42,7 +40,7 @@
                         font-size: 3.5rem;
                         font-weight: 900;
                         color: var(--white);
-                        letter-spacing: 10px;
+                        letter-spacing: 8px;
                         text-align: center;
                         text-transform: uppercase;
                         opacity: 0;
@@ -98,5 +96,33 @@
     100% {
         height: 100%;
         opacity: 1;
+    }
+}
+
+// Media Queries
+@media only screen and (max-width: 1280px) {
+    #spain .spain-gallery-container .spain-gallery {
+        padding-bottom: 0px;
+
+        .gallery-item .overlay h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #spain .spain-gallery-container .spain-gallery {
+
+        .gallery-title h1 {
+            p {
+                font-size: 1rem;
+                letter-spacing: 7px;
+            }
+        }
+
+        .gallery-item .overlay h1 {
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+        }
     }
 }
