@@ -1160,6 +1160,81 @@ html {
   box-shadow: 0 0 80px black;
 }
 
+@media only screen and (max-width: 1280px) {
+  .country-galleria-container .country-galleria {
+    width: 95%;
+  }
+  .country-galleria-container .country-galleria .galleria-buttons button {
+    padding: 10px 40px;
+  }
+  .country-galleria-container .country-galleria .galleria-buttons button h1 {
+    font-size: 1.8rem;
+  }
+  .country-galleria-container .country-galleria .galleria-carousel .carousel-top .carousel-slide {
+    font-size: 1.5rem;
+  }
+  .country-galleria-container .country-galleria .galleria-carousel .carousel-top .carousel-right .play,
+.country-galleria-container .country-galleria .galleria-carousel .carousel-top .carousel-right .pause,
+.country-galleria-container .country-galleria .galleria-carousel .carousel-top .carousel-right .close {
+    font-size: 2.4rem;
+  }
+  .country-galleria-container .country-galleria .galleria-carousel .carousel-img-container .carousel .carousel-item {
+    height: 70%;
+    max-width: 700px;
+  }
+  .country-galleria-container .country-galleria .galleria-carousel .carousel-buttons span {
+    font-size: 3.6rem;
+  }
+  .country-galleria-container .country-galleria .galleria {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .country-galleria-container .country-galleria {
+    width: 80%;
+  }
+  .country-galleria-container .country-galleria .galleria-buttons button {
+    padding: 8px 30px;
+  }
+  .country-galleria-container .country-galleria .galleria-buttons button h1 {
+    font-size: 1.5rem;
+  }
+  .country-galleria-container .country-galleria .galleria-carousel .carousel-img-container .carousel .carousel-item {
+    height: 70%;
+    width: 60%;
+  }
+  .country-galleria-container .country-galleria .galleria-carousel .carousel-img-container .carousel .carousel-item img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .country-galleria-container .country-galleria .galleria {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .country-galleria-container .country-galleria .galleria-buttons button {
+    margin-right: 8px;
+  }
+  .country-galleria-container .country-galleria .galleria-buttons button h1 {
+    font-size: 1.2rem;
+  }
+  .country-galleria-container .country-galleria .galleria-carousel .carousel-top .carousel-slide {
+    font-size: 1.2rem;
+  }
+  .country-galleria-container .country-galleria .galleria-carousel .carousel-top .carousel-right .play,
+.country-galleria-container .country-galleria .galleria-carousel .carousel-top .carousel-right .pause,
+.country-galleria-container .country-galleria .galleria-carousel .carousel-top .carousel-right .close {
+    font-size: 2rem;
+  }
+  .country-galleria-container .country-galleria .galleria-carousel .carousel-buttons span {
+    font-size: 2.6rem;
+  }
+  .country-galleria-container .country-galleria .galleria {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 180px;
+  }
+}
 #italy {
   height: auto;
   width: 100%;
@@ -1564,4 +1639,14 @@ html {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 0 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .england-galleria-container .england-galleria .england-buttons button {
+    padding: 8px 25px;
+  }
+  .england-galleria-container .england-galleria .england-buttons button h1 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
 }/*# sourceMappingURL=index.css.map */

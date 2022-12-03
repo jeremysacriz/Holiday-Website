@@ -266,3 +266,115 @@
         }
     }
 }
+
+// Media Queries
+@media only screen and (max-width: 1280px) {
+    .country-galleria-container .country-galleria {
+        width: 95%;
+
+        .galleria-buttons button {
+            padding: 10px 40px;
+    
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .galleria-carousel {
+            .carousel-top {
+                .carousel-slide {
+                    font-size: 1.5rem;
+                }
+
+                .carousel-right .play,
+                .carousel-right .pause,
+                .carousel-right .close {
+                    font-size: 2.4rem;
+                }
+            }
+
+            .carousel-img-container .carousel .carousel-item {
+                height: 70%;
+                max-width: 700px;
+            }
+
+            .carousel-buttons {
+                span {
+                    font-size: 3.6rem;
+                }
+            }
+        }
+
+        .galleria {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .country-galleria-container .country-galleria {
+        width: 80%;
+
+        .galleria-buttons button {
+            padding: 8px 30px;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .galleria-carousel {
+            .carousel-img-container .carousel .carousel-item {
+                height: 70%;
+                width: 60%;
+    
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .galleria {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-auto-rows: 200px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .country-galleria-container .country-galleria {
+        
+        .galleria-buttons button {
+            margin-right: 8px;
+
+            h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .galleria-carousel {
+            .carousel-top {
+                .carousel-slide {
+                    font-size: 1.2rem;
+                }
+
+                .carousel-right .play,
+                .carousel-right .pause,
+                .carousel-right .close {
+                    font-size: 2rem;
+                }
+            }
+
+            .carousel-buttons {
+                span {
+                    font-size: 2.6rem;
+                }
+            }
+        }
+
+        .galleria {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 180px;
+        }
+    }
+}
