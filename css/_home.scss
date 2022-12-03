@@ -278,11 +278,12 @@
                     letter-spacing: 3px;
                     padding: 10px 50px;
                     color: var(--white);
-                    background: linear-gradient(to right, #FF4500, orange);
+                    background: linear-gradient(to right, orange, orange, orange, var(--cream));
                     text-decoration: none;
                     text-transform: uppercase;
                     position: relative;
                     z-index: 3;
+                    transition: 0.6s ease;
     
                     p {
                         z-index: 2;
@@ -295,7 +296,7 @@
                         left: 0;
                         height: 100%;
                         width: 0%;
-                        background: linear-gradient(to right, orange, orange, orange, white);
+                        background: linear-gradient(to right, #FF4500, orange);
                         transition: 0.6s ease;
                         z-index: -1;
                     }

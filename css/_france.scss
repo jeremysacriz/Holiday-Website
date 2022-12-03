@@ -7,24 +7,13 @@
         background-position: 0 60%;
     }
 
-    .france-gallery-container {
-        .france-gallery {
-            padding-bottom: 50px;
-
-            &::before {
-                bottom: 0;
-            }
-    
-            &::after {
-                right: 10%;
-            }
+    .france-gallery-container .france-gallery {
+        &::before {
+            bottom: 0;
         }
-    }
-}
 
-// Media Queries
-@media only screen and (max-width: 1280px) {
-    #france .france-gallery-container .france-gallery {
-        padding-bottom: 0px;
+        &::after {
+            right: 10%;
+        }
     }
 }

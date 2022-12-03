@@ -1,0 +1,30 @@
+.nav {
+    height: auto;
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+
+    a {
+        text-decoration: none;
+        
+        span {
+            font-size: 2.5rem;
+            color: var(--black);
+            padding-right: 15px;
+            cursor: pointer;
+        }
+    }
+
+    h1 {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0 15px;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+}

@@ -62,6 +62,7 @@
         max-width: 1300px;
         margin: 0 auto;
         padding: 0 100px;
+        padding-bottom: 50px;
         position: relative;
         background-color: var(--cream);
         display: grid;
@@ -205,6 +206,8 @@
     }
 
     .gallery-container .gallery {
+        padding-bottom: 0px;
+        
         &::before {
             display: none;
         }
