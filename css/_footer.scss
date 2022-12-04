@@ -7,7 +7,7 @@ footer {
         height: auto;
         width: 90%;
         margin: 0 auto;
-        padding: 100px 0;
+        padding: 75px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -72,8 +72,6 @@ footer {
 @media only screen and (max-width: 1280px) {
     footer {
         .footer-container {
-            padding: 75px 0;
-
             .countries ul li {
                 margin-right: 30px;
             }
