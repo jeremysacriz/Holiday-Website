@@ -35,7 +35,7 @@
         width: 100%;
         margin: 0 auto;
         padding: 40px 0;
-        background-color: #171717;
+        background-color: var(--black);
         display: flex;
         align-items: center;
     
@@ -52,7 +52,7 @@
                     background-color: var(--white);
     
                     &.active {
-                        background-color: var(--light-beige);
+                        background-color: var(--dark-beige);
                     }
                 }
             }
@@ -124,6 +124,11 @@
             }
         }
     }
+}
+
+.italy-footer {
+    border-top: 2px solid var(--dark-beige);
+    background-color: #171717;
 }
 
 // Media Queries
