@@ -155,6 +155,7 @@ html {
 footer {
   height: auto;
   width: 100%;
+  border-top: 6px solid var(--dark-beige);
   background-color: #171717;
 }
 
@@ -809,7 +810,7 @@ footer .footer-container .countries ul li:last-child {
 }
 
 #home .country-container .country-title h1 {
-  color: #171717;
+  color: var(--dark-beige);
   font-size: 5rem;
   font-weight: 100;
   letter-spacing: 5px;
@@ -1013,7 +1014,7 @@ footer .footer-container .countries ul li:last-child {
   font-size: 3rem;
   font-weight: 100;
   letter-spacing: 2px;
-  color: var(--black);
+  color: var(--dark-beige);
   text-transform: uppercase;
 }
 
@@ -1743,7 +1744,7 @@ footer .footer-container .countries ul li:last-child {
   width: 100%;
   margin: 0 auto;
   padding: 40px 0;
-  background-color: var(--black);
+  background-color: #171717;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1850,7 +1851,7 @@ footer .footer-container .countries ul li:last-child {
 }
 
 .italy-footer {
-  border-top: 2px solid var(--dark-beige);
+  border-top: 4px solid var(--white);
   background-color: #171717;
 }
 
