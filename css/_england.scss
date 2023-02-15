@@ -10,14 +10,6 @@
     .england-gallery-container .england-gallery {
         align-items: flex-start;
 
-        &::before {
-            left: 0;
-        }
-
-        &::after {
-            left: 5%;
-        }
-
         .england-gallery-title {
             height: 100%;
             display: flex;

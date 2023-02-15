@@ -1,21 +1,13 @@
-#spain {
+#netherlands {
     height: auto;
     width: 100%;
 
-    .spain-top {
+    .netherlands-top {
         background-image: url('./img/lasagrada.jpg');
         background-position: center;
     }
 
-    .spain-gallery-container .spain-gallery {
-
-        &::before {
-            bottom: 0;
-        }
-
-        &::after {
-            right: 8%;
-        }
+    .netherlands-gallery-container .netherlands-gallery {
 
         .gallery-item {
             &:hover {
@@ -35,7 +27,7 @@
                 animation: fadeOut 0.6s ease forwards;
 
                 h1 {
-                    font-size: 3.5rem;
+                    font-size: 2.8rem;
                     font-weight: 900;
                     color: var(--white);
                     letter-spacing: 8px;
@@ -98,7 +90,7 @@
 
 // Media Queries
 @media only screen and (max-width: 1280px) {
-    #spain .spain-gallery-container .spain-gallery {
+    #netherlands .netherlands-gallery-container .netherlands-gallery {
         .gallery-item .overlay h1 {
             font-size: 3rem;
         }
@@ -106,7 +98,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-    #spain .spain-gallery-container .spain-gallery {
+    #netherlands .netherlands-gallery-container .netherlands-gallery {
 
         .gallery-title h1 {
             p {

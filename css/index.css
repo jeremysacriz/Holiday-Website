@@ -155,7 +155,7 @@ html {
 footer {
   height: auto;
   width: 100%;
-  border-top: 6px solid var(--dark-beige);
+  border-top: 4px solid var(--dark-beige);
   background-color: #171717;
 }
 
@@ -405,24 +405,6 @@ footer .footer-container .countries ul li:last-child {
   justify-items: center;
 }
 
-.gallery-container .gallery::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  height: auto;
-  width: 95%;
-  border-bottom: 2px solid black;
-}
-
-.gallery-container .gallery::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: auto;
-  border-left: 2px solid black;
-}
-
 .gallery-container .gallery .gallery-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,12 +532,6 @@ footer .footer-container .countries ul li:last-child {
   }
   .gallery-container .gallery {
     padding-bottom: 0px;
-  }
-  .gallery-container .gallery::before {
-    display: none;
-  }
-  .gallery-container .gallery::after {
-    display: none;
   }
   .gallery-container .gallery .gallery-title h1 {
     font-size: 6rem;
@@ -1744,7 +1720,7 @@ footer .footer-container .countries ul li:last-child {
   width: 100%;
   margin: 0 auto;
   padding: 40px 0;
-  background-color: #171717;
+  background-color: var(--cream);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1765,7 +1741,7 @@ footer .footer-container .countries ul li:last-child {
 }
 
 #italy .carousel-container .carousel .indicators .indicator-item {
-  background-color: var(--white);
+  background-color: var(--black);
 }
 
 #italy .carousel-container .carousel .indicators .indicator-item.active {
@@ -1789,6 +1765,7 @@ footer .footer-container .countries ul li:last-child {
 #italy .carousel-container .carousel .carousel-item .img-container {
   height: 100%;
   width: 100%;
+  border-radius: 20px;
   position: relative;
 }
 
@@ -1829,7 +1806,7 @@ footer .footer-container .countries ul li:last-child {
   font-weight: 100;
   letter-spacing: 6px;
   line-height: 1;
-  color: var(--white);
+  color: var(--cream);
   text-transform: uppercase;
   z-index: 2;
   margin: 0;
@@ -1851,7 +1828,7 @@ footer .footer-container .countries ul li:last-child {
 }
 
 .italy-footer {
-  border-top: 4px solid var(--white);
+  border-top: 1px solid var(--white);
   background-color: #171717;
 }
 
@@ -1918,14 +1895,6 @@ footer .footer-container .countries ul li:last-child {
   background-position: 0 60%;
 }
 
-#france .france-gallery-container .france-gallery::before {
-  bottom: 0;
-}
-
-#france .france-gallery-container .france-gallery::after {
-  right: 10%;
-}
-
 #france-galleria {
   height: auto;
   width: 100%;
@@ -1952,45 +1921,37 @@ footer .footer-container .countries ul li:last-child {
   padding: 0 15px;
 }
 
-#spain {
+#netherlands {
   height: auto;
   width: 100%;
 }
 
-#spain .spain-top {
+#netherlands .netherlands-top {
   background-image: url("./img/lasagrada.jpg");
   background-position: center;
 }
 
-#spain .spain-gallery-container .spain-gallery::before {
-  bottom: 0;
-}
-
-#spain .spain-gallery-container .spain-gallery::after {
-  right: 8%;
-}
-
-#spain .spain-gallery-container .spain-gallery .gallery-item:hover .overlay {
+#netherlands .netherlands-gallery-container .netherlands-gallery .gallery-item:hover .overlay {
   height: 100%;
   -webkit-animation: height 0.4s ease forwards;
           animation: height 0.4s ease forwards;
 }
 
-#spain .spain-gallery-container .spain-gallery .gallery-item:hover .overlay h1 {
+#netherlands .netherlands-gallery-container .netherlands-gallery .gallery-item:hover .overlay h1 {
   -webkit-animation: fadeIn 0.6s ease forwards;
           animation: fadeIn 0.6s ease forwards;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-#spain .spain-gallery-container .spain-gallery .gallery-item .overlay {
+#netherlands .netherlands-gallery-container .netherlands-gallery .gallery-item .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-animation: fadeOut 0.6s ease forwards;
           animation: fadeOut 0.6s ease forwards;
 }
 
-#spain .spain-gallery-container .spain-gallery .gallery-item .overlay h1 {
-  font-size: 3.5rem;
+#netherlands .netherlands-gallery-container .netherlands-gallery .gallery-item .overlay h1 {
+  font-size: 2.8rem;
   font-weight: 900;
   color: var(--white);
   letter-spacing: 8px;
@@ -2072,40 +2033,40 @@ footer .footer-container .countries ul li:last-child {
 }
 
 @media only screen and (max-width: 1280px) {
-  #spain .spain-gallery-container .spain-gallery .gallery-item .overlay h1 {
+  #netherlands .netherlands-gallery-container .netherlands-gallery .gallery-item .overlay h1 {
     font-size: 3rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #spain .spain-gallery-container .spain-gallery .gallery-title h1 p {
+  #netherlands .netherlands-gallery-container .netherlands-gallery .gallery-title h1 p {
     font-size: 1rem;
     letter-spacing: 7px;
   }
-  #spain .spain-gallery-container .spain-gallery .gallery-item .overlay h1 {
+  #netherlands .netherlands-gallery-container .netherlands-gallery .gallery-item .overlay h1 {
     font-size: 2.5rem;
     letter-spacing: 5px;
   }
 }
 
-#spain-galleria {
+#netherlands-galerij {
   height: auto;
   width: 100%;
 }
 
-#spain-galleria .spain-top {
+#netherlands-galerij .netherlands-top {
   background-image: url("./img/lasagrada.jpg");
   background-position: center;
 }
 
-#spain-galleria .spain-nav h1 {
+#netherlands-galerij .netherlands-nav h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   color: var(--light-grey);
   opacity: 0.8;
 }
 
-#spain-galleria .spain-nav h2 {
+#netherlands-galerij .netherlands-nav h2 {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 900;
@@ -2128,14 +2089,6 @@ footer .footer-container .countries ul li:last-child {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-
-#england .england-gallery-container .england-gallery::before {
-  left: 0;
-}
-
-#england .england-gallery-container .england-gallery::after {
-  left: 5%;
 }
 
 #england .england-gallery-container .england-gallery .england-gallery-title {

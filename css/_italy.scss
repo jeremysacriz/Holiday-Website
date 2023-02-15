@@ -35,7 +35,7 @@
         width: 100%;
         margin: 0 auto;
         padding: 40px 0;
-        background-color: #171717;
+        background-color: var(--cream);
         display: flex;
         align-items: center;
     
@@ -49,7 +49,7 @@
                 bottom: -30px;
     
                 .indicator-item {
-                    background-color: var(--white);
+                    background-color: var(--black);
     
                     &.active {
                         background-color: var(--dark-beige);
@@ -73,6 +73,7 @@
                 .img-container {
                     height: 100%;
                     width: 100%;
+                    border-radius: 20px;
                     position: relative;
     
                     .img-overlay {
@@ -100,7 +101,7 @@
                                 font-weight: 100;
                                 letter-spacing: 6px;
                                 line-height: 1;
-                                color: var(--white);
+                                color: var(--cream);
                                 text-transform: uppercase;
                                 z-index: 2;
                                 margin: 0;
@@ -127,7 +128,7 @@
 }
 
 .italy-footer {
-    border-top: 4px solid var(--white);
+    border-top: 1px solid var(--white);
     background-color: #171717;
 }
 

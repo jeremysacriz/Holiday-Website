@@ -6,14 +6,4 @@
         background-image: url('./img/france/eiffel.jpg');
         background-position: 0 60%;
     }
-
-    .france-gallery-container .france-gallery {
-        &::before {
-            bottom: 0;
-        }
-
-        &::after {
-            right: 10%;
-        }
-    }
 }
