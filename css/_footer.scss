@@ -8,7 +8,7 @@ footer {
         height: auto;
         width: 90%;
         margin: 0 auto;
-        padding: 75px 0;
+        padding: 50px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -108,6 +108,28 @@ footer {
 
             .copyright h3 {
                 font-size: 1.2rem;
+            }
+        }
+
+        &.italy-footer {
+            .footer-container {
+                padding: 20px 0;
+                
+                .countries {
+                    ul {
+                        display: block;
+                        text-align: center;
+
+                        li {
+                            margin: 0px;
+                            line-height: 3rem;
+                        }
+                    }
+                }
+
+                .copyright {
+                    margin: 10px;
+                }
             }
         }
     }

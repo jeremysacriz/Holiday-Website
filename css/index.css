@@ -163,7 +163,7 @@ footer .footer-container {
   height: auto;
   width: 90%;
   margin: 0 auto;
-  padding: 75px 0;
+  padding: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,6 +273,20 @@ footer .footer-container .countries ul li:last-child {
   }
   footer .footer-container .copyright h3 {
     font-size: 1.2rem;
+  }
+  footer.italy-footer .footer-container {
+    padding: 20px 0;
+  }
+  footer.italy-footer .footer-container .countries ul {
+    display: block;
+    text-align: center;
+  }
+  footer.italy-footer .footer-container .countries ul li {
+    margin: 0px;
+    line-height: 3rem;
+  }
+  footer.italy-footer .footer-container .copyright {
+    margin: 10px;
   }
 }
 
@@ -561,8 +575,8 @@ footer .footer-container .countries ul li:last-child {
   .gallery-container .gallery {
     width: 80%;
     padding: 0 50px;
-    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
   .gallery-container .gallery .gallery-title h1 {
     font-size: 5rem;
@@ -579,6 +593,7 @@ footer .footer-container .countries ul li:last-child {
   }
   .gallery-container .gallery {
     padding: 0px;
+    width: 90%;
   }
   .gallery-container .gallery .gallery-title h1 {
     font-size: 4.5rem;
@@ -589,6 +604,7 @@ footer .footer-container .countries ul li:last-child {
   }
   .gallery-container .gallery .gallery-item {
     height: 300px;
+    width: 100%;
   }
   .gallery-container .gallery .gallery-item .overlay-title {
     padding: 10px 0;
@@ -1264,6 +1280,12 @@ footer .footer-container .countries ul li:last-child {
     -webkit-transform: translate(-60px, 60px);
             transform: translate(-60px, 60px);
   }
+  #home .country-container .country-content .country-netherlands-container .country-item .country-link .country-overlay .overlay-title h1 {
+    font-size: 2.6rem;
+  }
+  #home .country-container .country-content .country-netherlands-container .country-item .country-link .country-overlay .overlay-title-2 h1 {
+    font-size: 2rem;
+  }
   #home .country-container .country-content .country-england-container {
     margin-bottom: 0px;
   }
@@ -1717,148 +1739,9 @@ footer .footer-container .countries ul li:last-child {
   margin: 0;
 }
 
-#italy .carousel-container {
-  height: 100vh;
-  max-height: 750px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 0;
-  background-color: var(--cream);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#italy .carousel-container .carousel {
-  height: 550px;
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-#italy .carousel-container .carousel .indicators {
-  bottom: -30px;
-}
-
-#italy .carousel-container .carousel .indicators .indicator-item {
-  background-color: var(--black);
-}
-
-#italy .carousel-container .carousel .indicators .indicator-item.active {
-  background-color: var(--dark-beige);
-}
-
-#italy .carousel-container .carousel .carousel-item {
-  margin: 0 auto;
-  height: 450px;
-  width: 650px;
-  text-decoration: none;
-}
-
-#italy .carousel-container .carousel .carousel-item.active .img-container .img-overlay .img-overlay-title {
-  -webkit-animation: fadeIn 0.6s ease forwards;
-          animation: fadeIn 0.6s ease forwards;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-#italy .carousel-container .carousel .carousel-item .img-container {
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  position: relative;
-}
-
-#italy .carousel-container .carousel .carousel-item .img-container .img-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  line-height: 1;
-  margin: 0;
-}
-
-#italy .carousel-container .carousel .carousel-item .img-container .img-overlay .img-overlay-title {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  opacity: 0;
-}
-
-#italy .carousel-container .carousel .carousel-item .img-container .img-overlay .img-overlay-title h1, #italy .carousel-container .carousel .carousel-item .img-container .img-overlay .img-overlay-title p {
-  font-size: 4.5rem;
-  font-weight: 100;
-  letter-spacing: 6px;
-  line-height: 1;
-  color: var(--cream);
-  text-transform: uppercase;
-  z-index: 2;
-  margin: 0;
-}
-
-#italy .carousel-container .carousel .carousel-item .img-container .img-overlay .img-overlay-title p {
-  font-size: 1.5rem;
-  margin-top: 8px;
-}
-
-#italy .carousel-container .carousel .carousel-item .img-container img {
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
 .italy-footer {
   border-top: 1px solid var(--white);
   background-color: #171717;
-}
-
-@media only screen and (max-width: 1280px) {
-  #italy .carousel-container .carousel .carousel-item {
-    height: 300px;
-    width: 450px;
-  }
-  #italy .carousel-container .carousel .carousel-item .img-container .img-overlay .img-overlay-title h1 {
-    font-size: 4rem;
-  }
-  #italy .carousel-container .carousel .carousel-item .img-container .img-overlay .img-overlay-title p {
-    font-size: 1.2rem;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  #italy .carousel-container .carousel .carousel-item {
-    height: 250px;
-    width: 350px;
-  }
-  #italy .carousel-container .carousel .carousel-item .img-container .img-overlay .img-overlay-title h1 {
-    font-size: 3rem;
-  }
-  #italy .carousel-container .carousel .carousel-item .img-container .img-overlay .img-overlay-title p {
-    font-size: 1rem;
-  }
 }
 
 #italy-galleria {
