@@ -97,7 +97,7 @@
                             text-transform: uppercase;
                             margin-bottom: 10px;
                         }
-    
+
                         p {
                             font-size: 1.6rem;
                             font-weight: 100;
@@ -400,13 +400,13 @@
                 }
             }
 
-            .country-spain-container {
-                .country-spain {
+            .country-netherlands-container {
+                .country-netherlands {
                     left: 100px;
 
                     .country-overlay {
                         &::before {
-                            background-image: linear-gradient(#AA151B, #F1BF00, #F1BF00, #AA151B);
+                            background-image: linear-gradient(#AE1C28, #FFF, #FFF, #21468B);
                         }
                     }
                 }
@@ -491,27 +491,35 @@
                 font-size: 4.2rem;
             }
 
-            .country-content .country-main-container {
-                height: 300px;
-
-                .country-item {
-                    max-width: 500px;
-
-                    .country-link .country-overlay {
-                        .overlay-title h1,
-                        .overlay-title-2 h1 {
-                            font-size: 4rem;
+            .country-content {
+                .country-main-container {
+                    height: 300px;
+    
+                    .country-item {
+                        max-width: 500px;
+    
+                        .country-link .country-overlay {
+                            .overlay-title,
+                            .overlay-title-2 {
+                                h1 {
+                                    font-size: 4rem;
+                                }
+                            }
+    
+                            img {
+                                height: 30px;
+                                width: 50px;
+                            }
                         }
-
-                        img {
-                            height: 30px;
-                            width: 50px;
-                        }
+                    }
+    
+                    .country-bg-text h1 {
+                        font-size: 2.5rem;
                     }
                 }
 
-                .country-bg-text h1 {
-                    font-size: 2.5rem;
+                .country-netherlands-container .country-item .country-link .country-overlay .overlay-title-2 h1 {
+                    font-size: 3.2rem;
                 }
             }
         }
@@ -530,7 +538,7 @@
         }
 
         .country-italy-container .country-italy,
-        .country-spain-container .country-spain {
+        .country-netherlands-container .country-netherlands {
             left: 0;
         }
 
