@@ -68,3 +68,12 @@
         opacity: 0;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .loader {
+        &.hidden {
+            transition: 0s;
+            transition-delay: 0s;
+        }
+    }
+}

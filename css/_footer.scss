@@ -111,25 +111,23 @@ footer {
             }
         }
 
-        &.italy-footer {
-            .footer-container {
-                padding: 20px 0;
-                
-                .countries {
-                    ul {
-                        display: block;
-                        text-align: center;
+        .footer-container {
+            padding: 20px 0;
+            
+            .countries {
+                ul {
+                    display: block;
+                    text-align: center;
 
-                        li {
-                            margin: 0px;
-                            line-height: 3rem;
-                        }
+                    li {
+                        margin: 0px;
+                        line-height: 3rem;
                     }
                 }
+            }
 
-                .copyright {
-                    margin: 10px;
-                }
+            .copyright {
+                margin: 10px;
             }
         }
     }

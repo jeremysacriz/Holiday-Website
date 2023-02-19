@@ -25,3 +25,17 @@
         }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .france-galleria-container .france-galleria {
+        
+        .france-buttons button {
+            padding: 8px 22px;
+
+            h1 {
+                font-size: 1rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
